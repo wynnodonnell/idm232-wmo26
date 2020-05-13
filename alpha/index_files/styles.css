@@ -245,8 +245,17 @@ p{
     font:normal 1.25rem cera;
     margin-right: 5px;
     text-align: left;
-    color:#F4F8FF;
+    color:white;
     list-style: none;
+}
+.paragraph2{
+    font:normal 1.25rem cera;
+    margin-right: 5px;
+    text-align: left;
+    color:var(--d);
+    list-style: none;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 .main{
     padding: 1rem;
@@ -277,11 +286,12 @@ p{
     
 }
 .image{
-    display: block;
+display: block;
     margin-left: auto;
     margin-right: auto;
     max-height: 25rem;
     max-width: 90%;
+    margin-top: auto;
     
 }
 footer{
@@ -306,7 +316,7 @@ footer{
 a{
     font: bold 1.5rem cera;
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
 }
 a:hover{
     color:var(--b);
