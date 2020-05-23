@@ -88,7 +88,7 @@
            
         <footer>
             <p>
-                <a href="alpha.html#top">Return to Top</a>
+                <a href="index.php#top">Return to Top</a>
              </p>
             <p>
                    Off The Plate Recipes
