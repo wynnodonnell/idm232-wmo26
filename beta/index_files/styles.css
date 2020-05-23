@@ -318,6 +318,7 @@ a{
     color: white;
     text-decoration: underline;
 }
+
 a:hover{
     color:var(--b);
 
@@ -350,4 +351,14 @@ select:hover{
 .with {
     width: 90%;
     margin: auto;
+}
+strong{
+    font: bold 1.5rem cera;
+}
+.subtitle{
+    font: normal 1.2rem cera;
+    color:white;
+    width: 90%;
+    margin: auto;
+    margin-top: .5rem;
 }
