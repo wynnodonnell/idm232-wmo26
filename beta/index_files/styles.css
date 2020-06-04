@@ -326,6 +326,10 @@ a:hover{
 
 footer a{
     color: var(--d);
+    background-color: var(--lb);
+    border: .1rem solid var(--d);
+    padding: .2rem;
+    box-shadow: 0 5px 7px 0 var(--d);
 }
 ul{
     font: normal 1rem cera;
@@ -351,6 +355,7 @@ select:hover{
 .with {
     width: 90%;
     margin: auto;
+    padding-top: .8rem;
 }
 strong{
     font: bold 1.5rem cera;

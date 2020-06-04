@@ -2,14 +2,32 @@
 //Open a connection to DB file.
     require 'include/db.php';
 
-    //pull information from database table
-    $table = 'recipes';
-    $query = "SELECT * FROM {$table}";
-    $result = mysqli_query($connection, $query);
+    $filter = $_GET['filter'];
 
-    //check for errors
-    if (!$result ) {
-        die ('Database query failed');
+    if (isset($_POST['submit'])) {
+        $table = 'recipes';
+        $search = $_POST['search'];
+        $query = "SELECT * FROM {$table} WHERE title LIKE '%{.$search.}%' OR subtitle LIKE '%{.$search.}%'";
+
+        $result = mysqli_query($connection, $query);
+        if (!$result) {
+            die ('Search query failed');
+        } 
+    }
+    else if (isset($filter)){
+        print_r('weee');
+        $query = "SELECT * FROM {$table} WHERE proteine LIKE '%{$filter}%'";
+        $result = mysqli_query($connection, $query);
+    } else {
+      //pull information from database table
+      $table = 'recipes';
+      $query = "SELECT * FROM {$table}";
+      $result = mysqli_query($connection, $query);
+  
+      //check for errors
+      if (!$result ) {
+          die ('Database query failed');
+      }     
     }
 ?>
 
@@ -31,16 +49,19 @@
         <!--This is the menu bar on desktop-->
         <header>
             <div class="topbar">
-                <a href="alpha.html">
+                <a href="index.php">
                     <img class="logo" src="images/logo.jpg" alt="Off the Plate Recipes Logo">
                 </a>
                 <div class="topbar2">
+            <form class="formsearch" action="index.php" method="POST">
+            <input type="submit" name="submit" value="Submit" class="sub">
                 <input type="text" placeholder="Search Recipes">
-                <a href="search.html"> <button class="sub" type="submit">Search</button></a>
-                <select id="filters">
+
+            </form>
+                <select id="filters" onchange="location = this.value;">
                     <option>Filters</option>
                     <option>Vegetarian</option>
-                    <option>Chicken</option>
+                    <option value="index.php?filter=Chicken">Chicken</option>
                     <option>Beef</option>
                     <option>Pork</option>
                     <option>Vegan</option>
@@ -64,11 +85,22 @@
 
             ?>
             <div class="main3">
-                <a href="recipe.html">
+
+
+            <?php 
+                $id = $row['id'];
+
+                echo "<a href=\"recipe.php?id={$id}\">";
+            ?>
+
                     <img class="indeximage" src="images/<?php echo $row['main_img'] ?>" alt="The Main Recipe image for this recipe.">
                 </a>
                 <p  class="with">
-                    <a href="recipe.html">
+            <?php 
+                $id = $row['id'];
+                
+                echo "<a href=\"recipe.php?id={$id}\">";
+            ?>
                         <?php echo $row['title'] ?></a>
                     <div>
                     <p class="subtitle"><?php echo $row['subtitle'] ?></p>
@@ -90,11 +122,12 @@
             <p>
                 <a href="index.php#top">Return to Top</a>
              </p>
-            <p>
-                   Off The Plate Recipes
-             </p>
+
              <p>
                 <a href="help.html">Help</a>
+             </p>
+             <p>
+                   Off The Plate Recipes&#8482
              </p>
         </footer>
     </body>
