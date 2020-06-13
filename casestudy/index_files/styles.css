@@ -7,17 +7,34 @@ body{
 }
 div{
     margin: 2rem;
-    background-color: darkblue;
     background-image: linear-gradient(45deg, #17202A ,#101010);
     padding: 1rem;
     box-shadow: 2.5px 1.5px 10px white;
 }
+#top{
+    background-image: linear-gradient(#0A000000 ,#0A000000),url("../images/hero.png");
+    background-repeat: no-repeat;
+    height: 50%;
+    color: white;
+    margin:auto;
+
+    background-position: center;
+}
+#top p{
+    background-color: black;
+    min-width: 40%;
+    max-width: 80%;
+    margin:auto;
+    box-shadow: 2.5px 1.5px 10px white;
+    margin-top: 2rem;
+}
 .text{
-    margin-right:10rem;
-    margin-left: 10rem;
+    width:80%;
     text-align: left;
     font-size: 2rem;
+    margin:auto;
     margin-top: 3rem;
+
 }
 .text2{
     font-size: 1.5rem;
@@ -34,4 +51,11 @@ a{
 }
 a:hover{
     color:grey;
+}
+.poto{
+    max-width: 30rem;
+    margin-left: 1rem;
+}
+.photo{
+    max-width: 90%;
 }

@@ -1,13 +1,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" href="images/logo.jpg"><!--This is the icon on the top of the page-->
     <title>IDM 232 Case Study</title><!--This is the text that will appear on the tab in the browser-->
     <link rel="stylesheet" href="index_files/styles.css"><!--This loads the regular style sheet for this file-->
 </head>
 <body>
     <div id="top">
-        Off the Plate Recipes: A Case Study
+        <p>Off the Plate Recipes: A Case Study</p>
+        <p>By Wynn O'Donnell</p>
+        
     </div>
     <div class="text">
         Overview:
@@ -37,7 +38,9 @@
         Sketches:
         <p class="text2">I created hand drawn wireframes for two different pages for this project, the main page and the recipe page. For each of the two pages I drew three different layouts, one for mobile, one for tablet, and one for desktop.</p>
         <p class="text2">The main, or home page, which features all the recipes laid out on the page, a search function, and a filter function. </p>
+        <img class="poto" src="images/mobile.jpg" alt="Wynn's Mobile Wireframes"><img class="poto" src="images/ipad_main.jpg" alt="Wynn's Tablet Wireframes"><img class="poto" src="images/desktop_main.jpg" alt="Wynn's Desktop Wireframes">
         <p class="text2">The recipe page features the individual steps, and images for the steps, laid out on it. It also has the ingredients list, cook time, servings, and calories per serving.</p>
+        <img class="poto" src="images/mobile.jpg" alt="Wynn's Mobile Wireframes"><img class="poto" src="images/ipad_recipe.jpg" alt="Wynn's Tablet Wireframes"><img class="poto" src="images/desktop_recipe.jpg" alt="Wynn's Desktop Wireframes">
     </div>
     <div class="text">
         Style guides:
@@ -45,18 +48,43 @@
             I created two style tiles for this project, the first one would be used for my Alpha and Beta builds of this project, however by the time the Final build was ready to be put out I was no longer loving my original color choice, and instead opted to go back and change out a few of the colors for ones that I liked more. I had created variables for the colors I was using, so this was as easy as changing the variable from one color to another. 
         </p>
         <p class="text2">My First Style Tile, used for the Alpha and Beta Builds</p>
+        <img class="photo" src="images/styletile.jpg" alt="Wynn's first style tile">
         <p class="text2">My Second Style Tile, used for the Final build of the project</p>
+        <img class="photo" src="images/styletile2.jpg" alt="Wynn's second style tile">
     </div>
     <div class="text">
        Alpha:
-       <p class="text2">The Alpha build was the first of three phases. The Alpha was a static build, using placeholder text and images for the main and recipe pages. Each page on the site was fully working from a design perspective, but the PHP wasn't implemented yet, and would have to be added during the Beta and Final versions.</p>
+       <p class="text2">The Alpha build was the first of three phases. The Alpha was a static build, using placeholder text and images for the main and recipe pages. Each page on the site was fully working from a design perspective, and fully responsive to different browser sizes, but the PHP wasn't implemented yet, and would have to be added during the Beta and Final versions.</p>
+       <img class="photo" src="images/alpha.PNG" alt="Wynn's Alpha Build">
+       <p class="text2"><a href="../alpha/alpha.html" target="_blank">A Link to my Alpha Page</a></p>
     </div>
     <div class="text">
         Beta:
+        <p class="text2">
+            After creating a static version of the website it was time to begin implementing the PHP and SQL into the project. The first step to this was adding the recipe information into a spreadsheet. I needed to add the title of the recipe, the subtitle, the description, cooktime, servings, calories per serving, type or proteine, the main image, the description for each step, the image for each step, the ingredient image, and the ingredient list. Needless to say this was not something I did alone, working with the rest of the class we were able to put all of this info into a shared spreadsheet that could be added to a SQL database.
+        </p>
+        <img class="photo" src="images/beta1.PNG" alt="Wynn's SQL Database">
+        <p class="text2">
+            After adding the spreadsheet to a database it was time to begin integrating the PHP for the home page of the website so that it would auto generate the images, titles, and subtitles on the home page. 
+        </p>
+        <img class="photo" src="images/beta2.PNG" alt="Wynn's beta Build">
+        <p class="text2">
+            The next step was to add the connection between the recipe page and the home page so that when a certain recipe was clicked on in the home page, it would have the corresponding information displayed on the recipe page.
+        </p>
+        <img class="photo" src="images/beta3.PNG" alt="Wynn's beta Build">
+        <p class="text2"><a href="../beta/index.php" target="_blank">A Link to my Beta Page</a></p>
     </div>
     <div class="text">
         Final:
+        <p class="text2">
+            For the Final section of the project I had to implement the search and filter features using PHP and the SQL database. The user can search on the home page for key words within a recipe, and it will display results based on their search terms. They can also use the filters provided, which filter by the proteine used in the recipe. 
+        </p>
+        <img class="photo" src="images/final1.PNG" alt="Wynn's Final Build">
+        <p class="text2"><a href="../final/index.php" target="_blank">A Link to my Final Page</a></p>
     </div>
     <div class="text">
         Results:
+        <p class="text2">
+            I think the final project was a success. I was able to integrate all the features I needed for the project, and learned a lot about PHP and SQL along the way. I was very unsure about this project at the beginning, and thought going through it would be much more difficult than it was, but after learning more about how I was going to flesh out each page with PHP the task at hand became a lot less daunting. I finished strong, and with everything working, and a new color scheme I think I was successful in this project.
+        </p>
     </div>
